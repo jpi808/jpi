@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>seletores de id e classes </title>
-    <style>/*seletor de id #unico aplica o estilo ao elemento único com o id único 
-    */
+    <title>Seletores ID e Class</title>
+    <style>
+        /* Seletor de ID: #Unico - aplica o estilos ao elemento único com o id="unico"
+        */
         #unico {
-            height: 30px;/*altura de 30 px*/
-            width: 150px;/*largura de 150px*/
-            background-color: blueviolet;/*cor de fundo amarelo*/
-            padding: 5px;/*espaçamento interno 5 pixels em todos os lados*/
-            
+            height: 30px; /*Altura de 30 pixels*/
+            width: 150px; /* Largura de 150 pixels*/
+            background-color: yellow; /* Cor de fundo Amarelo*/
+            padding: 5px; /* Espaçamento interno: 5 pixels em todos os lados*/            
         }
-        /*seletor de classe: categoria aplica estilos a elementos com class-categoria*/
-        .categoria{
-            height: 50px; /*altura*/
-            width: 300px; /*largura*/
-            background-color: blue; /*cor do fundo*/
-            padding: 5px; /*alinhamento interno*/
-            color: white /*cor das letras*/
+
+        /*Selector de classe: .categoria - aplica estilos a elementos com class="categoria"*/
+        .categoria {
+            height: 50px; /* Altura*/
+            width: 300px; /*Largura*/
+            background-color: blue; /*Cor do fundo*/
+            padding: 5px; /*Espaçamento interno*/
+            color: white; /*Cor do texto*/
         }
-        /*seletor ID meio aplicar estilos a um elemento unico com o id=meio*/
-        #meio{
-            width: 500px;/*largura*/
-            background-color: midnightblue;/*cor de fundo*/
+
+        /* Seletor ID: #meio aplicar estilos a um elemento único com o id="meio"*/
+        #meio {
+            width: 500px; /*Largura*/
+            background-color: cadetblue; /* cor de fundo*/
         }
-        .arrendondamento{
-            border-radius: 10px;/*arredonda as bordas raio de 10 pixels*/
-            border-bottom: solid rebeccapurple;/*borda inferior solida*/
+
+        .arredondamento {
+            border-radius: 10px; /*Arredonda as bordas: raio de 10 pixels */
+            border-bottom: solid 3px red; /* borda inferior: sólida, 3 pixels de espesura, vermelha */
         }
+
     </style>
 </head>
+
 <body>
-<h1>trabalhando com ID e Classes</h1>
-<hr>
-<h2>seletores de ID</h2>
-<p class="arrendondamento">É usaoo um seletor de id em um elemento HTML para deixar ele único e especifico</P>    
-<p id="unico" class="arrendondamento">Usando um ID</p>
+    <h1>Trabalhando com ID e Classe</h1>
+    <hr>
+    <h2>Seletores de ID</h2>
 
-<hr>
+    <p class="arredondamento"> È usado um seletor de id em um elmento HTML para deixar ele único e específico. </p>
+    <p>Deve ser usado um única vez na página.</p>
+    <p id="unico" class="arredondamento">Usando um ID</p>
 
-  <h2>seletores de classes</h2>
-              <p>O seletor classe seleciona elementos com um atribuyo de classe especifico.</p>
-<p>pode ser usado mais de uma vez na pagina</p>
-<h3>exemplo:</h3>
-<p class="categoria arrendondamento">usando uma classe</p>
-<p class="categoria" id="meio">usando uma classe</p>
-<p class="categoria">usando uma classe</p>
+    <hr>
+
+    <h2>Seletores de Classe</h2>
+    <p> O seletor classe seleciona elementos com um atributo de classe específico.</p>
+    <p>Pode ser usado  mais de uma vez na página</p>
+    <h3>Exemplo:</h3>
+    <p class="categoria arredondamento">Usando uma Classe</p>
+    <p class="categoria" id="meio">Usando uma Classe</p>
+    <p class="categoria">Usando uma Classe</p>
 </body>
 
 </html>

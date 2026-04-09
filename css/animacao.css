@@ -1,0 +1,185 @@
+
+/*Resetando o css padrão do navegador*/
+* {
+    margin: 0;
+    /*zerando a margem*/
+    padding: 0;
+    /*zerando os espaçamentos*/
+    box-sizing: border-box;
+    /* faz a largura e altura inluirem paddin e borda */
+}
+
+/* Estilo do corpo da pagina*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(240, 89%, 4%);
+    color: #222;
+    line-height: 1.6; /*espaçamento entre as linhas*/
+}
+
+/*Topo da pagina*/
+
+.topo {
+  background: linear-gradient(135deg, #6a0dad, #9c27b0); /*um Gradiente em degradê*/
+  color: #c100bb;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.topo h1 {
+    margin-bottom: 10px;
+    font-size: 2.2rem; /*tamanho da fonte*/
+}
+
+.topo p {
+    font-size: 1rem;
+}
+
+/*container principal */
+.container {
+    width: 90%;
+    max-width: 1000px; /*Limite maximo da tela*/
+    margin: 30px auto;/*centralizar horizontalmente*/
+}
+
+/*Blocos de conteudos*/
+.bloco {
+    background-color: #7a066d;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);/*Sombra nos cards*/
+}
+.bloco h2 {
+    margin-top: 10px;
+    color: #6a0dad;
+}
+.bloco p {
+    margin-bottom: 20px;
+}
+
+.botao-transition {
+background-color: #6a0dad;
+color: white;
+border: none;
+padding: 14px 24px;
+border-radius: 8px;
+cursor: pointer;
+font-size: 16px;
+
+transition: 0.4s;
+}
+
+.botao-transition:hover {
+background-color: #731094;
+transform: scale(1.1);
+}
+.caixa-transform {
+    width: 100px;
+    height: 100px;
+    background-color: #9c27b0;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.caixa-transform:hover {
+    /*rotate= girar o elemento*/
+    /*scale = aumenta o tamanho*/
+    transform: rotate(90deg) scale(1.15);
+}
+
+/*bloco 3 - animação em movimento*/
+/*area onde a animação aconteçe*/
+.area-animacao {
+    width: 100%;
+    height: 120px;
+    border: 2px dashed #6a0dad/*borda pontilhada*/;
+border-radius: 10px;
+position: relative;/*necessario para posicionamento interno*/
+overflow: hidden;/*esconde o que sair da area demarcada*/
+padding: 10px;
+}
+/*caixa que ira se mover*/
+
+.caixa-movendo {
+    width: 80px;
+    height: 80px;
+    background-color: midnightblue;
+    border-radius: 12px;
+    position: absolute;/*permite movimentação dentro da area*/
+    top: 20px; 
+    /*animação
+    nome /duração /repetição /direção*/
+    animation: moverCaixa 3s infinite alternate;
+}
+@keyframes moverCaixa {
+    /*estado inicial*/
+    from{
+        left: 0;
+      }   
+      to {
+left: calc(100% - 80px);
+/*vai determinar ate onde ele vai*/
+        }
+   
+}
+/*bloco 4 - texto aparecendo*/
+.texto-aparecendo{
+    opacity: 0;/*começa invisivel*/
+    
+    /*forward = mantem o estado final*/
+    animation: aparecerTexto 2s forwards;
+}
+
+@keyframes aparecerTexto {
+    from {
+        opacity: 0;
+        transform: translateY(20px);/*começar mais baixo*/
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);/*sobe para a posição normal*/
+    }
+}
+/*bloco 5 - bola subindo e decendo*/
+.bola {
+    width: 80px;
+    height: 80px;
+    background-color: #222;
+    border-radius: 50%; /*forma circular*/
+
+    /*alternate = vai e volta
+    ease-in-out= suavizar inicio e fim*/
+    animation: subirDescer 1.5s infinite alternate ease-in-out;
+}
+@keyframes subirDescer {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100px);
+    }
+}
+/*bloco 6 - card interativo*/
+.card{
+ background-color: #6a0dad;
+ border: 2px solid #c100bb;
+ border-radius: 12px;
+ padding: 20px;
+ width: 250px;
+
+ /*transição suave*/
+ transition: 0.4;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: aqua;
+}
+.card:hover {
+    /*leve movimento para cima*/
+    transform: translateY(-8px) scale(1.03);
+    /*sombra mais forte*/
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0,15);
+
+    border-color: #222;
+}

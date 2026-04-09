@@ -67,45 +67,52 @@
 
     </table>
 
-    <h2>cabeçalho, corpo e ridapé da tabela</h2>
-    <p>estes elementos criam seções dentro da tabela que pode receber uma formatação diferenciada ultil para formatação de tabelas com muitos dados</p>
+    <hr>
 
-<table border="1">
-  <caption>tabela thead/tfoot/tbody</caption><!--titulo da tabela-->
-  <thead>
-    <tr>
-        <th colspan="2">coluna 1</th> <!--mescla 2 colunas-->
-        <th>coluna 2</th>
-    </tr>
-  </thead>
-  <tfoot>
-    <tr>
-      <td>resultado 1</td>
-      <td>resultado 2</td>
-      <td>resultado 3</td>
-    </tr>
-  </tfoot>
-  
-  <tbody> <!--corpo da tabela com dados principais-->
-   <tr>
-      <td rowspan="2">conteudo a</td>
-       <td>conteudo B</td>
-       <td>conteudo C</td>
-   </tr>
-<tr>
-    <!-- <td></td> -->
-    <td>conteudo E</td>
-    <td>conteudo F</td>
-</tr>
-<tr>
-    <td>conteudo G</td>
-    <td>conteudo H</td>
-    <td>conteudo I</td>
-</tr>
-  </tbody>
+    <h2>Cabeçalho, corpo e rodapé da tabela</h2>
+    <p>Estes Elementos criam seções dentro da tabela que pode receber uma formatação diferenciada, ultil para formatação
+        de tabelas com muitos dados.</p>
 
-</table>
+    <table border="1">
+        <caption> Tabela thead/tfoot/tbody</caption> <!-- Titulo da Tabela -->
+        <thead> <!--Cabeçalho da tabela, agrupamento semântico-->
+            <tr>
+                <th colspan="2">Coluna 1</th> <!--Mescla 2 colunas-->
+                <th>Coluna 2 </th>
+            </tr>
+        </thead>
 
+        <tfoot> <!-- Rodapé da tabela, ultil para totais e  obeservações-->
+            <tr>
+                <td>Resuldado 1</td>
+                <td>Resuldado 2</td>
+                <td>Resuldado 3</td>
+            </tr>
+        </tfoot>
+
+        <tbody> <!--Corpo da Tabela com dados principais-->
+            <tr>
+                <td rowspan="2"> Conteudo A</td> <!-- Mesclar a célula vertical (duas linhas)-->
+                <td>Conteudo B</td>
+                <td>Conteudo C</td>
+            </tr>
+            <tr>
+
+                <!-- <td>Coteudo D</td> -->
+                <td>Coteudo E</td>
+                <td>Coteudo F</td>
+            </tr>
+            <tr>
+                <td>Coteudo G</td>
+                <td>Coteudo H</td>
+                <td>Coteudo I</td>
+
+            </tr>
+
+        </tbody>
+
+
+    </table>
 </body>
 
 </html>

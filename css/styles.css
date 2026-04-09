@@ -1,0 +1,86 @@
+/*Customização do pseudo-classe*/
+
+h1 {
+    color: red; /* mudar cor do texto*/
+}
+
+p {
+    color: blue; /*Mudar a cor do texto*/
+}
+
+a {
+    background-color: #0b2555; /*Cor de fundo*/
+    color: white; /*Cor do texto*/
+    padding: 10px; /*Espaçamento interno*/
+    text-decoration: none; /*tirar a linha que fica embaixo do link*/
+    border-radius: 15px; /*Bordas arredondas*/
+    border: solid crimson 2px; /*bordas vermelhas*/
+    width: 30px; /*Define Largura*/
+}
+
+/*Comportamento de link ao ser clicado: cor verde clara para links não visitados*/
+a:link {
+    color: #6cff00;
+}
+
+/*Comportamento  de passar o mouse sobre: fundo verde claro e texto azul no hover*/
+a:hover {
+    background-color: chartreuse;
+    color: blue;
+}
+
+/*Comportamento de ativação*/
+a:active {
+    background-color: #fc0e0e;
+    color: black;
+}
+
+button:link {
+    color: #6cff00;
+}
+
+button:visited{
+    color: black;
+    background-color: yellow;
+}
+
+button:hover {
+    background-color: aquamarine;
+    color: #0b2555;
+}
+
+/*Trabalhando com Pseudo-elemento*/
+
+/*Alterar a primeira linha dos paragrafos em vermelhor e maiúsculas pequenas*/
+p::first-line{
+    color: red;
+    font-variant: small-caps;    
+}
+
+/*Primeira Letra dos paragrafos em magenta escura e tamanho extra grande*/
+p::first-letter {
+    color: darkmagenta;
+    font-size: xx-large;
+}
+
+/*antes do elemento: insere uma imagem de Lupa antes do titulo h3*/
+h3::before {
+    content: url(/img/lupa.webp);
+}
+
+/*Insere depois do elemento*/
+h3::after {
+    content: url(/img/lupa.webp);
+}
+
+/* espefifico para listas ( bulets ou marcadores): cor verde clara para marcadores de lista*/
+
+::marker {
+    color: #6cff00;
+}
+
+/* modifica o que o usuario seleciona: texto selecionado em laranja escuro com fundo preto*/
+::selection {
+    color: darkorange;
+    background-color: #000;
+}
